@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import avatar from "../../../assets/img/atdilshan-profile.png";
+import avatar from "../../../assets/img/atdilshan-profile.jpg";
 
 export interface Props {
   className?: string;
