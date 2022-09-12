@@ -1,15 +1,50 @@
-import clsx from 'clsx'
+import { useEffect, useCallback } from "react";
+import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 export interface Props {
-  className?: string
+  className?: string;
 }
 
 const LanguageSwitch = ({ className }: Props) => {
-  return (
-    <div className={clsx(className)}>
-      <span>LanguageSwitch</span>
-    </div>
-  )
-}
+  const { t, i18n } = useTranslation();
 
-export default LanguageSwitch
+  const changeLanguage = useCallback(
+    (uiLanguage: string) => {
+      localStorage.setItem("uiLanguage", uiLanguage);
+      i18n.changeLanguage(uiLanguage);
+    },
+    [i18n]
+  );
+
+  useEffect(() => {
+    const uiLanguage = localStorage.getItem("uiLanguage") ?? "en";
+    changeLanguage(uiLanguage);
+  }, [changeLanguage]);
+
+  const btnClassName = (uiLanguage: string) =>
+    clsx("px-4 py-1 rounded", {
+      "outline outline-2": uiLanguage === i18n.language,
+    });
+
+  return (
+    <div className={clsx(className, "flex items-center pt-2")}>
+      <div className={clsx("flex md:gap-2")}>
+        <button
+          onClick={() => changeLanguage("en")}
+          className={btnClassName("en")}
+        >
+          English
+        </button>
+        <button
+          onClick={() => changeLanguage("ta")}
+          className={btnClassName("ta")}
+        >
+          தமிழ்
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default LanguageSwitch;

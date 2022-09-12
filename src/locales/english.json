@@ -1,0 +1,23 @@
+{
+  "Biography": {
+    "bio1": "My name is AT Dilshan. ",
+    "bio2": "I am a Full-Stack developer based in Jaffna, Srilanka.",
+    "bio3": "I am familiar with the MERN framework which includes ",
+    "bio4": "MongoDB, Express, React and node.js.",
+    "bio5": "I am very passionate about improving my coding skills & developing applications & websites. ",
+    "bio6": "You can reach out via ",
+    "bio7": "",
+    "email": "Email."
+  },
+  "Hero": {
+    "title": "AT Dilshan",
+    "typed": {
+      "text1": "Developer",
+      "text2": "Freelancer",
+      "text3": "Designer",
+      "text4": "Youtuber",
+      "text5": "Blogger",
+      "text6": "IT Enthusiast"
+    }
+  }
+}
