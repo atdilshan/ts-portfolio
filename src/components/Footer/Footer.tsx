@@ -24,7 +24,7 @@ const Footer = ({ className }: Props) => {
         </div>
         <div className="flex-1 pt-8 min-w-fit">
           <div>Uki Coding School - Jaffna Center</div>
-          <div>124 Rasavinthoddam Rd</div>
+          <div>124 Rasavinthoddam Road</div>
           <div>Class of 2022</div>
         </div>
         <div className="pt-8">
